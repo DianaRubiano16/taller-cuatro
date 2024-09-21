@@ -1,11 +1,19 @@
-document.getElementById('new-advice').addEventListener('click', fetchAdvice);
+const adviceId = document.getElementById('advice-id');
+const adviceText = document.getElementById('advice');
+const generateBtn = document.getElementById('generate-btn');
 
-async function fetchAdvice() {
-    try {
-        const response = await axios.get('https://api.adviceslip.com/advice');
-        const advice = response.data.slip.advice;
-        document.getElementById('advice').textContent = advice;
-    } catch (error) {
-        console.error('Error fetching advice:', error);
-    }
+function fetchAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            adviceId.textContent = data.slip.id;
+            adviceText.textContent = data.slip.advice;
+        })
+        .catch(error => console.error('Error:', error));
 }
+
+generateBtn.addEventListener('click', fetchAdvice);
+
+// Llama a la función para obtener un consejo al cargar la página
+fetchAdvice();
+

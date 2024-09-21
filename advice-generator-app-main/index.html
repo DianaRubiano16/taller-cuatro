@@ -1,50 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Advice generator app</title>
-
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    #app {
-      text-align: center; /* Centra el contenido */
-      margin: 20px; /* Margen para separar el contenido */
-    }
-    #advice {
-      font-size: 24px; /* Tamaño de fuente para el consejo */
-      margin: 20px 0; /* Espaciado alrededor del consejo */
-    }
-    button {
-      padding: 10px 20px; /* Tamaño del botón */
-      font-size: 16px; /* Tamaño de fuente del botón */
-      cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    }
-    button:hover {
-      background-color: hsl(210, 60%, 90%); /* Color al pasar el mouse */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Consejos</title>
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
+    <div id="advice-container">
+        <h1 id="advice">Consejo #<span id="advice-id"></span></h1>
+        <button id="generate-btn">Generar Consejo</button>
+    </div>
 
-  <div id="app">
-    <h1>Advice #<span id="advice-id">1</span></h1> <!-- Se actualizará con el ID del consejo -->
-    <p id="advice">Haz clic en el dado para obtener un consejo.</p>
-    <button id="new-advice">🎲</button> <!-- Botón para generar un nuevo consejo -->
-  </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <script src="script.js"></script> <!-- Enlaza tu archivo JavaScript -->
+    <script src="script.js"></script> 
 </body>
 </html>
