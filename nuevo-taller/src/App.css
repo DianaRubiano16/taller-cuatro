@@ -1,0 +1,39 @@
+:root {
+  --main-color: #4caf50;
+  --secondary-color: #fff;
+  --button-hover-color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+#app {
+  text-align: center;
+  margin: 50px auto;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+@media (max-width: 768px) {
+  #app {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
