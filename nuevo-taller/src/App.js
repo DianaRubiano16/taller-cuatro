@@ -3,10 +3,13 @@ import useFetch from './hooks/useFetch'; // Importa el hook
 import './App.css';
 
 function App() {
-  const { data, loading, error } = useFetch('https://api.adviceslip.com/advice');
+  const { data, loading, error, fetchData} =useFetch(
+    'https://api.adviceslip.com/advice'
+  );
   const [advice, setAdvice] = useState('');
 
   const handleNewAdvice = () => {
+    fetchData ();
     if (data && data.slip) {
       setAdvice(data.slip.advice);
     }
